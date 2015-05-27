@@ -1,0 +1,10 @@
+- var menu = { 'NodeJS': '/api/nodejs', 'Ruby': '/api/ruby', 'Java': '/api/java', 'Python': '/api/python', 'Perl': '/api/perl', 'PHP': '/api/php', 'Elixir': '/api/elixir',  'C#': '/api/csharp',  'REST API': '/api/rest'};
+
+each val, key in menu
+  li.padding-horizontal-less(style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
+    if pageSelected === key
+      a.menu-item.active(href=val title=key)= key
+    else if key === 'Log In'
+      a.menu-item.login-btn(href=val title=key)= key
+    else
+      a.menu-item(href=val title=key)= key
