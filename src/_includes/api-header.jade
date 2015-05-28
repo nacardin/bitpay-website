@@ -1,9 +1,10 @@
 .bg-gray-api.api-header
   .row(role="navigation")
-    .column.small-3
-      a(href="/" title="Home").logo
-      span.uppercase.margin-left-less.small(style="vertical-align: super;") api reference
+    .column.small-8.xlarge-3
+      a(href="/" title="Home").logo.white-link--opacity
+      a(href="/api" title="API Reference").white-link--opacity
+        span.uppercase.padding-left.small(style="position:absolute;left:125px;top:22px;border-left:1px solid;") api reference
 
-    .column.small-9
+    .column.xlarge-9.show-for-xlarge-up
       ul.margin-bottom-none
         include api-menu.jade

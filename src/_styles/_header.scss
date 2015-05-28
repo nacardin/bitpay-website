@@ -14,12 +14,14 @@
     background-image: url('../images/bitpay-logo-primary.svg');
   }
   .api-header & {
-    width: 95px;
-    margin-top: 1.1rem;
+    margin-top: 1.25rem;
     margin-bottom: 0;
     margin-right: 0.5rem;
     padding-right: 0.5rem;
-    border-right: 1px solid $gray-medium;
+    padding-bottom: 2.2rem;
+    @media #{$xlarge-up} {
+      padding-bottom: 0;
+    }
   }
 }
 
