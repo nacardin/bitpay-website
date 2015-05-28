@@ -1,12 +1,15 @@
 extends primary
+  
 
-block header
-  include ../_includes/api-header
-  
-block content
-  .api-nav
+block container
+  div(class='#{contentClass}')
+    block header
+      include ../_includes/api-header
     
-  .api-content  
-    block information
-  
-block footer
+    block content
+      .api-nav
+        
+      .api-content  
+        block information
+          
+    block footer
