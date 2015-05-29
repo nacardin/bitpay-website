@@ -1,3 +1,8 @@
+$api-nav-width: 250px;
+$content-left-offset: $api-nav-width;
+$api-pane-max-width: 800px;
+$right-huge-screen-left-position: $api-pane-max-width;
+
 .api {
   position: absolute;
   bottom: 0;
@@ -15,7 +20,7 @@
     left:0;
     top:62px;
     bottom:0;
-    width: 300px;
+    width: $api-nav-width;
     background: #FFFFFF;
     border-right: 1px solid #CCCCCC;
   }
@@ -28,13 +33,49 @@
   right: 0;
   left: 0;
   @media #{$xlarge-up} {
-    left:300px;
+    left: $content-left-offset;
   }
 }
 
 .api .row {
   max-width: none;
-  border-bottom: 1px solid #CCCCCC;
+  position: relative;
+  overflow-x: hidden;
+  &.border {
+    &:before,
+    &:after {
+      top: 0;
+      display: block;
+      height: 1px;
+      content: "";
+    }
+    &:before {
+      left: 0;
+      position: relative;
+      @media #{$xlarge-up} {
+        background: #CCCCCC;
+        width: 50%;
+        max-width: $api-pane-max-width;
+      }
+    }
+    &:after {
+      position: relative;
+      width: auto;
+      right: 0;
+      @media #{$xlarge-up} {
+        background: #4C525E;
+        left: 50%;
+      }
+      @media (min-width: 1900px) {
+        left: $right-huge-screen-left-position;
+      }
+    }
+    &:last-of-type {
+      &:after {
+        height: 0;
+      }
+    }
+  }
 }
 
 .middle-pane,
@@ -49,13 +90,13 @@
   @media #{$xlarge-up} {
     float: left;
     width: 50%;
-    max-width: 800px;
+    max-width: $api-pane-max-width;
   }
 }
 
 .right-pane {
   width: auto;
-  background: #3C3C3C;
+  background: #30353D;
   @media #{$xlarge-up} {
     margin-left: 50%;
   }
@@ -66,7 +107,7 @@
 
 .code-content {
   width: 100%;
-  max-width: 800px;
+  max-width: $api-pane-max-width;
 }
 
 .background-container {
@@ -74,21 +115,21 @@
   @media #{$xlarge-up} {
     display: block;
     position: fixed;
-    top: 0;
+    top: 62px;
     right: 0;
     bottom: 0;
-    left: 300px;
+    left: $content-left-offset;
   }
 }
 
 .dark-background {
   position: absolute;
-  top: 62px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 50%;
-  background: #3C3C3C;
+  background: #30353D;
   @media (min-width: 1900px) {
-    left: 800px;
+    left: $right-huge-screen-left-position;
   }
 }
