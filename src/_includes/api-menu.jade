@@ -1,8 +1,9 @@
-- var menu = { 'NodeJS': '/api/nodejs', 'Ruby': '/api/ruby', 'Java': '/api/java', 'Python': '/api/python', 'Perl': '/api/perl', 'PHP': '/api/php', 'Elixir': '/api/elixir',  'C#': '/api/csharp',  'REST API': '/api/rest'};
+- var menu = { 'nodejs': '/api/nodejs', 'ruby': '/api/ruby', 'java': '/api/java', 'python': '/api/python', 'perl': '/api/perl', 'php': '/api/php', 'elixir': '/api/elixir',  'c-sharp': '/api/csharp',  'rest': '/api/rest'};
 
 each val, key in menu
-  li.padding-horizontal-less(style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
-    if pageSelected === key
+  if pageSelected === key
+    li.padding-horizontal-less(class='#{key}' style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
       a.menu-item.active(href=val title=key)= key
-    else
+  else
+    li.padding-horizontal-less(style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
       a.menu-item(href=val title=key)= key

@@ -1,5 +1,5 @@
 $api-nav-width: 250px;
-$content-left-offset: $api-nav-width;
+$content-left-position: $api-nav-width;
 $api-pane-max-width: 800px;
 $right-huge-screen-left-position: $api-pane-max-width;
 
@@ -33,7 +33,7 @@ $right-huge-screen-left-position: $api-pane-max-width;
   right: 0;
   left: 0;
   @media #{$xlarge-up} {
-    left: $content-left-offset;
+    left: $content-left-position;
   }
 }
 
@@ -118,7 +118,7 @@ $right-huge-screen-left-position: $api-pane-max-width;
     top: 62px;
     right: 0;
     bottom: 0;
-    left: $content-left-offset;
+    left: $content-left-position;
   }
 }
 
@@ -131,5 +131,34 @@ $right-huge-screen-left-position: $api-pane-max-width;
   background: #30353D;
   @media (min-width: 1900px) {
     left: $right-huge-screen-left-position;
+  }
+}
+
+li {
+  &.nodejs {
+    background: #80BD01;
+  }
+  &.ruby {
+    background: #CC342D;
+  }
+  &.java {
+    background: #5382A1;
+  }
+  &.python {
+    background: #43789F;
+  }
+  &.php {
+    background: #8892BF;
+  }
+  &.perl {
+    background: #004065;
+  }
+  &.elixir {
+    background: #4E2F61;
+  }
+  &.c-sharp,
+  &.go,
+  &.rest {
+    background: #111115;
   }
 }
