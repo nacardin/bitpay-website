@@ -26,6 +26,10 @@ $right-huge-screen-left-position: $api-pane-max-width;
   }
 }
 
+.api-header {
+  z-index: 10;
+}
+
 .api-content {
   position: absolute;
   top:62px;
@@ -134,31 +138,72 @@ $right-huge-screen-left-position: $api-pane-max-width;
   }
 }
 
+$color-node: #80BD01;
+$color-ruby: #CC342D;
+$color-java: #5382A1;
+$color-python: #43789F;
+$color-php: #8892BF;
+$color-perl: #004065;
+$color-elixir: #4E2F61;
+$color-otherlang: #111115;
+
 li {
   &.nodejs {
-    background: #80BD01;
+    background: $color-node;
   }
   &.ruby {
-    background: #CC342D;
+    background: $color-ruby;
   }
   &.java {
-    background: #5382A1;
+    background: $color-java;
   }
   &.python {
-    background: #43789F;
+    background: $color-python;
   }
   &.php {
-    background: #8892BF;
+    background: $color-php;
   }
   &.perl {
-    background: #004065;
+    background: $color-perl;
   }
   &.elixir {
-    background: #4E2F61;
+    background: $color-elixir;
   }
   &.c-sharp,
   &.go,
   &.rest {
-    background: #111115;
+    background: $color-otherlang;
+  }
+}
+
+.api-header {
+  &.nodejs {
+    box-shadow: inset 0 -3px $color-node;
+  }
+  &.ruby {
+    box-shadow: inset 0 -3px $color-ruby;
+  }
+  &.java {
+    box-shadow: inset 0 -3px $color-java;
+  }
+  &.python {
+    box-shadow: inset 0 -3px $color-python;
+  }
+  &.php {
+    box-shadow: inset 0 -3px $color-php;
+  }
+  &.php {
+    box-shadow: inset 0 -3px $color-php;
+  }
+  &.perl {
+    box-shadow: inset 0 -3px $color-perl;
+  }
+  &.elixir {
+    box-shadow: inset 0 -3px $color-elixir;
+  }
+  &.c-sharp,
+  &.go,
+  &.rest {
+    box-shadow: inset 0 -3px $color-otherlang;
   }
 }

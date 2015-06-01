@@ -1,4 +1,7 @@
-.bg-gray-api.api-header
+-var pageSelected = '';
+block vars
+  
+.bg-gray-api.api-header(class='#{pageSelected}')
   .row(role="navigation")
     .column.small-8.xlarge-2
       a(href="/" title="Home").logo.white-link--opacity
