@@ -1,0 +1,10 @@
+- var menu = { 'nodejs': '/api/nodejs', 'ruby': '/api/ruby', 'java': '/api/java', 'python': '/api/python', 'perl': '/api/perl', 'php': '/api/php', 'elixir': '/api/elixir',  'c-sharp': '/api/csharp',  'rest': '/api/rest'};
+      
+.row.hide-for-xlarge-up(style="position:fixed; bottom: 0;")
+  select.margin-bottom-none(onChange="window.location.href=this.value")
+    option(selected disabled) Select a language
+    each val, key in menu
+      if pageSelected === key
+        option(selected value=val)= key
+      else
+        option(value=val)= key          
