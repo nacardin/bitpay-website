@@ -95,7 +95,6 @@ $right-huge-screen-left-position: $api-pane-max-width;
 .middle-pane {
   width: 100%;
   background: #F8F8F8;
-  float: none;
   @media #{$xlarge-up} {
     float: left;
     width: 50%;

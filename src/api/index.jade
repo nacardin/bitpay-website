@@ -10,12 +10,31 @@ append vars
 block information
   .row.border
     .middle-pane
+      mixin integration(src, href, name)
+        .column.small-4.large-3.margin-bottom.end
+          a.h1.background-contain.integration-logo(href="#{href}" title="#{name}" style="background-image: url('/images/integrations/#{src}');")
+          span.small.text-center.block.margin-top-less #{name}
       h3 Clients &amp; Libraries
       p BitPay maintains open-source clients and libraries for many popular languages. These packages include our cryptographically secure API which uses #[a(href="https://github.com/bitpay/bitauth") BitAuth], our authentication protocol.
-      p Pick your desired language to get started with the API Reference:
+      p.margin-bottom Pick your desired language to get started with the API Reference:
+      .row.small-collapse
+        +integration("nodejs.png", "/api/nodejs", "NodeJS")
+        +integration("ruby.png", "/api/ruby", "Ruby")
+        +integration("java.png", "/api/java", "Java")
+        +integration("python.png", "/api/python", "Python")
+        +integration("perl.png", "/api/perl", "Perl")
+        +integration("php.png", "/api/php", "PHP")
+        +integration("elixir.png", "/api/elixir", "Elixir")
+        +integration("csharp.png", "/api/csharp", "C Sharp")
+        //- +integration("android.png", "https://github.com/bitpay/android-sdk", "Android SDK")
+        //- +integration("cordova.png", "https://github.com/bitpay/cordova-sdk", "Cordova SDK")
+        //- +integration("ios.png", "https://github.com/bitpay/ios-sdk", "iOS SDK")
+        //- +integration("python.png", "https://github.com/bitpay/bitpay-python-py2", "Python 2")
+        //- +integration("c.png", "https://github.com/bitpay/bitpay-c-keyutils", "C")
+        //- +integration("go.png", "https://github.com/bitpay/bitpay-go", "Go")
     .right-pane
       .code-content
-        pre Pick your language to get started... 
+        pre Pick your language to start ^ ... 
   .row.border
     .middle-pane
       h3 REST API
@@ -24,8 +43,3 @@ block information
       p Check out the #[a(href="/api/rest") REST API Documentation].
     .right-pane
       .code-content
-        pre Technology is changing one of the most fundamental 
-          | mediums that touch every person on the planet: money. 
-          | Bitcoin’s rise showed us how much demand there is 
-          | for a globally accepted digital currency. However, 
-          | all the things holding bitcoin back  --  merchant
