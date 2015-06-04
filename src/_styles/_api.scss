@@ -16,13 +16,16 @@ $right-huge-screen-left-position: $api-pane-max-width;
   display: none;
   @media #{$xlarge-up} {
     display: block;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     left:0;
     top:62px;
     bottom:0;
     width: $api-nav-width;
     background: #FFFFFF;
     border-right: 1px solid #CCCCCC;
+    overflow: scroll;
+    padding: 1rem 2rem;
   }
 }
 
@@ -181,6 +184,9 @@ li {
 }
 
 .api-header {
+  position: fixed;
+  left: 0;
+  right: 0;
   &.nodejs {
     box-shadow: inset 0 -3px $color-node;
   }
