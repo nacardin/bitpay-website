@@ -5,6 +5,9 @@
   transition: background 0.2s;
   display: inline-block;
   line-height: 22px;
+  &:focus {
+    color: inherit;
+  }
   &-blue-solid {
     background: $blue-light;
     &:hover {

@@ -108,6 +108,8 @@ $right-huge-screen-left-position: $api-pane-max-width;
 .right-pane {
   width: auto;
   background: #30353D;
+  color: #ABAFB6;
+  -webkit-font-smoothing: antialiased;
   @media #{$xlarge-up} {
     margin-left: 50%;
   }
@@ -222,4 +224,22 @@ li {
   background: #1E232C;
   box-shadow: inset 0 0 6px darken(#1E232C, 5%);
   padding: 0.8rem 1rem;
+}
+
+.btn-github {
+  background: #53545C;
+  background-image: linear-gradient(-180deg, #606169 0%, #53545C 100%);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: none;
+  &:hover {
+    background: darken(#53545C, 5%);
+    background-image: linear-gradient(-180deg, #53545C 0%, #44454B 100%);
+  }
+  &:before {
+    content: "";
+    background: url('/images/github.svg') no-repeat center;
+    margin-right: 10px;
+    padding: 10px;
+  }
 }
