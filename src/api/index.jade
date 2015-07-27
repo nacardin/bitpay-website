@@ -7,6 +7,9 @@ append vars
   -var contentClass = 'white-header';
   -var bodyClass = 'api';
 
+block api-nav
+  br
+
 block information
   .row.border
     .middle-pane
@@ -15,26 +18,28 @@ block information
           a.h1.background-contain.integration-logo(href="#{href}" title="#{name}" style="background-image: url('/images/integrations/#{src}');")
           span.small.text-center.block.margin-top-less #{name}
       h3 Clients &amp; Libraries
-      p BitPay maintains open-source clients and libraries for many popular languages. These packages include our cryptographically secure API which uses #[a(href="https://github.com/bitpay/bitauth") BitAuth], our authentication protocol.
-      p.margin-bottom Pick your desired language to get started with the API Reference:
-      .row.small-collapse
-        +integration("nodejs.png", "/api/nodejs", "NodeJS")
-        +integration("ruby.png", "/api/ruby", "Ruby")
+      p BitPay maintains open-source clients and libraries for many popular languages. These packages include utilities for authenticating your app with #[a(href="https://github.com/bitpay/bitauth") BitAuth], an authentication standard secured by bitcoin cryptography.
+
+      h5 Choose a platform to get started.
+      .row.small-collapse.padding-top
+        +integration("android.png", "https://github.com/bitpay/android-sdk", "Android SDK")
+        +integration("c.png", "https://github.com/bitpay/bitpay-c-keyutils", "C")
+        +integration("csharp.png", "/api/csharp", "C Sharp")
+        +integration("cordova.png", "https://github.com/bitpay/cordova-sdk", "Cordova SDK")
+        +integration("elixir.png", "/api/elixir", "Elixir")
+        +integration("go.png", "https://github.com/bitpay/bitpay-go", "Go")
+        +integration("ios.png", "https://github.com/bitpay/ios-sdk", "iOS SDK")
         +integration("java.png", "/api/java", "Java")
-        +integration("python.png", "/api/python", "Python")
+        +integration("nodejs.png", "/api/nodejs", "NodeJS")
         +integration("perl.png", "/api/perl", "Perl")
         +integration("php.png", "/api/php", "PHP")
-        +integration("elixir.png", "/api/elixir", "Elixir")
-        +integration("csharp.png", "/api/csharp", "C Sharp")
-        //- +integration("android.png", "https://github.com/bitpay/android-sdk", "Android SDK")
-        //- +integration("cordova.png", "https://github.com/bitpay/cordova-sdk", "Cordova SDK")
-        //- +integration("ios.png", "https://github.com/bitpay/ios-sdk", "iOS SDK")
-        //- +integration("python.png", "https://github.com/bitpay/bitpay-python-py2", "Python 2")
-        //- +integration("c.png", "https://github.com/bitpay/bitpay-c-keyutils", "C")
-        //- +integration("go.png", "https://github.com/bitpay/bitpay-go", "Go")
+        +integration("python.png", "https://github.com/bitpay/bitpay-python-py2", "Python 2")
+        +integration("python.png", "/api/python", "Python 3")
+        +integration("ruby.png", "/api/ruby", "Ruby")
+
     .right-pane
       .code-content
-        pre Pick your language to start ^ ... 
+        pre Please choose a platform to get started.
   .row.border
     .middle-pane
       h3 REST API

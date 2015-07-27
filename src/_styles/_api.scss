@@ -149,10 +149,10 @@ $right-huge-screen-left-position: $api-pane-max-width;
 
 $color-node: #80BD01;
 $color-ruby: #CC342D;
-$color-java: #5382A1;
+$color-java: #F89720;
 $color-python: #43789F;
 $color-php: #8892BF;
-$color-perl: #004065;
+$color-perl: #4E5D84;
 $color-elixir: #4E2F61;
 $color-otherlang: #111115;
 
@@ -178,7 +178,7 @@ li {
   &.elixir {
     background: $color-elixir;
   }
-  &.c-sharp,
+  &.csharp,
   &.go,
   &.rest {
     background: $color-otherlang;
@@ -213,7 +213,7 @@ li {
   &.elixir {
     box-shadow: inset 0 -3px $color-elixir;
   }
-  &.c-sharp,
+  &.csharp,
   &.go,
   &.rest {
     box-shadow: inset 0 -3px $color-otherlang;

@@ -1,9 +1,17 @@
-- var menu = { 'nodejs': '/api/nodejs', 'ruby': '/api/ruby', 'java': '/api/java', 'python': '/api/python', 'perl': '/api/perl', 'php': '/api/php', 'elixir': '/api/elixir',  'c-sharp': '/api/csharp',  'rest': '/api/rest'};
-
-each val, key in menu
-  if pageSelected === key
-    li.padding-horizontal-less(class='#{key}' style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
-      a.menu-item.active(href=val title=key)= key
+mixin api-menu-list-item(text, itemClass, url)
+  if pageSelected === itemClass
+    li.padding-horizontal-less(class='#{itemClass}' style="padding-top: 1.1rem; padding-bottom: 1rem; display: block; float: left; list-style: none;")
+      a.menu-item.active(href=url title=text)= text
   else
     li.padding-horizontal-less(style="padding-top: 1.1rem; padding-bottom: 1rem;display: block; float: left; list-style: none;")
-      a.menu-item(href=val title=key)= key
+      a.menu-item(href=url title=text)= text
+
++api-menu-list-item('Node.js', 'nodejs', '/api/nodejs')
++api-menu-list-item('Ruby', 'ruby', '/api/ruby')
++api-menu-list-item('Java', 'java', '/api/java')
++api-menu-list-item('Python', 'python', '/api/python')
++api-menu-list-item('Perl', 'perl', '/api/perl')
++api-menu-list-item('PHP', 'php', '/api/php')
++api-menu-list-item('Elixir', 'elixir', '/api/elixir')
++api-menu-list-item('C#', 'csharp', '/api/csharp')
++api-menu-list-item('cURL', 'rest', '/api/rest')
